@@ -322,6 +322,10 @@ Yes, Application Gateway does support alerts, alerts are configured off metrics.
 
 The most common reason is access to the backend is being blocked by an NSG or custom DNS. Visit [Backend health, diagnostics logging, and metrics for Application Gateway](application-gateway-diagnostics.md) to learn more.
 
+**Q. Can i use the same Port for External and Internal Front End Ip?**
+
+No, you can't have the Listener with the same port. You would need to have different port for the same Protocol . For example, the public  443 for Https and the internal  444 for Https. Or deploy a Public facing Application gateway and an internal Application Gateway.
+
 ## Next Steps
 
 To learn more about Application Gateway visit [Introduction to Application Gateway](application-gateway-introduction.md).
